@@ -84,6 +84,7 @@ def draw_dialog(image,res_set,flag,path):
             h = int(curr_rect[1] + curr_rect[3])
             w = int(curr_rect[0] + curr_rect[2])
             image = cv2.rectangle(image, (x, y), (w, h), (0, 255, 0), 7)
+            # cv2.imwrite(r'C:\Users\User\Desktop\ct_plate.jpg', image)
             img_PIL = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
             draw = ImageDraw.Draw(img_PIL)
             draw.text((x,y-100),res[2], font=font, fill=(0,255,0))
@@ -100,4 +101,4 @@ def creat_dir(dir):
         os.mkdir(dir)
 
 if __name__ == '__main__':
-    recognize_and_show_one_image(r'C:\Users\User\Pictures\DEMO\贵A6BE04.jpg')
+    recognize_and_show_one_image(r'C:\Users\User\Pictures\car\IMG_20180523_123619.jpg',0)

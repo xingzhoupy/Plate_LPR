@@ -48,7 +48,7 @@ class Image(QDialog, Ui_Dialog):
         self.radio_flag =0
         self.pic = 1
         self.flag = 0
-        self.path = str()
+        self.path = ''
     @pyqtSlot()
     def on_radioButton_clicked(self):
 
